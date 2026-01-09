@@ -217,12 +217,12 @@ body{
   font-size:15px;
 }
 
-/* ===== DROPDOWN MENU (ALLGLORY STYLE) ===== */
+/* ===== DROPDOWN MENU (ALLGLORY SLIDE) ===== */
 .dropdown-menu{
   position:fixed;
   inset:0;
 
-  background:rgba(10,11,16,.97);
+  background:rgba(10,11,16,.96);
   backdrop-filter:blur(20px);
 
   display:flex;
@@ -231,15 +231,17 @@ body{
   justify-content:flex-start;
 
   padding-top:90px;
-  padding-left:28px;
+  padding-left:26px;
   gap:22px;
 
-  transform:translateY(-100%);
+  transform:translateY(-120%);
   opacity:0;
+
   transition:
-    transform .45s cubic-bezier(.22,1,.36,1),
+    transform .55s cubic-bezier(.16,1,.3,1),
     opacity .35s ease;
 
+  will-change:transform, opacity;
   z-index:9999;
 }
 
@@ -249,19 +251,21 @@ body{
 }
 
 .dropdown-menu a{
-  font-size:20px;          /* 👈 tamaño realista */
+  font-size:20px;
   font-weight:700;
   letter-spacing:1px;
-  text-decoration:none;
   color:#fff;
+  text-decoration:none;
   opacity:.9;
-  transition:.25s;
+  transition:
+    opacity .25s ease,
+    transform .25s ease;
 }
 
 .dropdown-menu a:hover{
   opacity:1;
+  transform:translateX(6px);
   color:var(--accent);
-  transform:translateX(4px);
 }
 
 @media (max-width:480px){

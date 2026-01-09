@@ -2,41 +2,121 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>UG Tools · Test</title>
+  <title>UG Labs | TikTok Downloader (Test)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0b0f1a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #12182a;
+      padding: 30px;
+      border-radius: 14px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 0 40px rgba(0,0,0,.4);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 14px;
+      opacity: .8;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #ff2d55;
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    button:hover {
+      opacity: .9;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      opacity: .6;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1f2540;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 
 <body>
 
-  <main class="container">
-    <section class="card">
-      <h1>UG Tools · Test</h1>
-      <p class="subtitle">
-        Herramienta experimental para videos públicos.
-      </p>
+  <div class="card">
+    <div class="badge">Proyecto en pruebas</div>
+    <h1>TikTok Downloader</h1>
+    <p>Pega el enlace del video y descárgalo sin marca de agua.</p>
 
-      <input
-        id="tiktokUrl"
-        type="text"
-        placeholder="Pega el enlace del video de TikTok"
-      >
+    <input type="text" id="tiktokUrl" placeholder="https://www.tiktok.com/..." />
 
-      <button onclick="processTikTok()">
-        Procesar video
-      </button>
+    <button onclick="download()">Descargar video</button>
 
-      <div id="result"></div>
+    <div class="footer">
+      United Glory Labs · Test Project
+    </div>
+  </div>
 
-      <p class="legal">
-        Uso personal y educativo.  
-        United Glory · Proyecto de prueba
-      </p>
-    </section>
-  </main>
+<script>
+  function download() {
+    const url = document.getElementById("tiktokUrl").value.trim();
 
-  <script src="script.js"></script>
+    if (!url) {
+      alert("Pega un enlace de TikTok");
+      return;
+    }
+
+    if (!url.includes("tiktok.com")) {
+      alert("Enlace no válido");
+      return;
+    }
+
+    // Servicio externo (modo pruebas)
+    const downloader = "https://ssstik.io/en?url=" + encodeURIComponent(url);
+
+    window.open(downloader, "_blank");
+  }
+</script>
+
 </body>
 </html>

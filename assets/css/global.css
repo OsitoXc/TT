@@ -345,4 +345,13 @@ body{
     opacity:.4;
   }
   }
+
+/* ===== NAV LINKS (ESPORT STYLE) ===== */
+.dropdown-menu a{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;          /* bien bold */
+  text-transform: uppercase;/* MAYÚSCULAS */
+  letter-spacing: 1.8px;     /* sensación condensada */
+  font-size: 22px;
+}
   

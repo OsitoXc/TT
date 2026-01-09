@@ -345,10 +345,3 @@ body{
     opacity:.4;
   }
   }
-
-/* ===== NAV TEXT STYLE ===== */
-.dropdown-menu a{
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-}

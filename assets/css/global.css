@@ -217,46 +217,63 @@ body{
   font-size:15px;
 }
 
-/* ===== DROPDOWN MENU ===== */
+/* ===== DROPDOWN MENU (ALLGLORY STYLE) ===== */
 .dropdown-menu{
   position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100vh;
+  inset:0;
 
-  background:rgba(12,13,17,.96);
-  backdrop-filter:blur(18px);
+  background:rgba(10,11,16,.97);
+  backdrop-filter:blur(20px);
 
   display:flex;
   flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:24px;
+  align-items:flex-start;
+  justify-content:flex-start;
+
+  padding-top:90px;
+  padding-left:28px;
+  gap:22px;
 
   transform:translateY(-100%);
-  transition:transform .35s cubic-bezier(.4,0,.2,1);
+  opacity:0;
+  transition:
+    transform .45s cubic-bezier(.22,1,.36,1),
+    opacity .35s ease;
 
   z-index:9999;
 }
 
 .dropdown-menu.active{
   transform:translateY(0);
+  opacity:1;
 }
 
 .dropdown-menu a{
-  font-size:22px;
-  font-weight:800;
+  font-size:20px;          /* 👈 tamaño realista */
+  font-weight:700;
   letter-spacing:1px;
-  color:#fff;
   text-decoration:none;
-  opacity:.85;
+  color:#fff;
+  opacity:.9;
   transition:.25s;
 }
 
 .dropdown-menu a:hover{
   opacity:1;
   color:var(--accent);
+  transform:translateX(4px);
+}
+
+@media (max-width:480px){
+  .dropdown-menu{
+    padding-top:80px;
+    padding-left:22px;
+    gap:18px;
+  }
+
+  .dropdown-menu a{
+    font-size:18px;
+  }
 }
 
 /* ===== PLAYER TAGS ===== */

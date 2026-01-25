@@ -12,6 +12,21 @@
   <link rel="stylesheet" href="assets/css/global.css">
 </head>
 
+<script>
+const input = document.getElementById('buyerContact');
+const paypalBox = document.getElementById('paypalBox');
+
+input.addEventListener('input', () => {
+  if (input.value.trim().length >= 5) {
+    paypalBox.style.opacity = '1';
+    paypalBox.style.pointerEvents = 'auto';
+  } else {
+    paypalBox.style.opacity = '.4';
+    paypalBox.style.pointerEvents = 'none';
+  }
+});
+</script>
+
 <body>
 
 <!-- NAVBAR -->
@@ -36,33 +51,66 @@
     <p class="text-muted">
       Servicios enfocados en gaming, desarrollo y soporte para comunidades.
     </p>
+
 <section class="product-card">
-  <h2 class="section-title">Minecraft: Java & Bedrock Edition (PC)</h2>
 
-  <p class="product-desc">
-    Acceso completo a <strong>Minecraft Java & Bedrock Edition</strong> para PC mediante
-    código oficial de activación.
-  </p>
+  <div class="product-header">
+    <img src="assets/img/minecraft-java-bedrock.png" alt="Minecraft Java & Bedrock" class="product-img">
 
-  <div class="product-note">
-    <strong>Nota importante</strong><br>
-    Se requiere una cuenta de Microsoft para activar el código.<br>
-    El código puede canjearse en el sitio web de Microsoft o en el sitio web oficial de Minecraft.<br>
-    Al activar en el sitio oficial, asegúrate de seleccionar <strong>Java & Bedrock Edition</strong>.
+    <div>
+      <h2 class="section-title">Minecraft: Java & Bedrock Edition (PC)</h2>
+      <p class="product-desc">
+        Código digital oficial para <strong>Minecraft Java & Bedrock Edition</strong> en PC.
+      </p>
+    </div>
   </div>
 
+  <!-- INFO -->
+  <div class="product-note">
+    <strong>Nota importante</strong><br>
+    • Requiere cuenta de Microsoft.<br>
+    • Canje en microsoft.com o minecraft.net.<br>
+    • Selecciona correctamente <strong>Java & Bedrock Edition</strong>.
+  </div>
+
+  <!-- CONTACT INPUT -->
+  <div class="contact-box">
+    <label>Correo electrónico o número telefónico <span>*</span></label>
+    <input
+      type="text"
+      id="buyerContact"
+      placeholder="ej. correo@email.com o +52 55 0000 0000"
+      required
+    >
+    <small>El código será enviado a este contacto.</small>
+  </div>
+
+  <!-- PRICE -->
   <div class="price-box">
+    <span class="old-price">$800 MXN</span>
     <span class="new-price">$400 MXN</span>
   </div>
 
-<div>
-  <style>.pp-TTNQX9SGN2EG6{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
-  <form action="https://www.paypal.com/ncp/payment/TTNQX9SGN2EG6" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-    <input class="pp-TTNQX9SGN2EG6" type="submit" value="Comprar ahora" />
-    <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
-    <section style="font-size: 0.75rem;"> Con la tecnología de <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
-  </form>
-</div>
+  <!-- PAYPAL -->
+  <div id="paypalBox" style="opacity:.4; pointer-events:none;">
+    <form action="https://www.paypal.com/ncp/payment/TTNQX9SGN2EG6"
+          method="post"
+          target="_blank"
+          style="display:inline-grid;justify-items:center;gap:.5rem;">
+      <input class="pp-TTNQX9SGN2EG6" type="submit" value="Comprar ahora">
+      <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards">
+    </form>
+  </div>
+
+  <!-- LEGAL -->
+  <div class="legal-box">
+    <p>
+      • Producto digital. <strong>No se aceptan reembolsos</strong> una vez entregado.<br>
+      • United Glory <strong>no está afiliado ni asociado</strong> con Mojang ni Microsoft.<br>
+      • La entrega se realiza manualmente tras confirmar el pago.
+    </p>
+  </div>
+
 </section>
 
 </main>

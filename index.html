@@ -33,7 +33,7 @@
 
     .shop-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
       margin-top: 40px;
     }
@@ -42,12 +42,11 @@
       background: #151515;
       border-radius: 14px;
       padding: 25px;
-      transition: transform .2s ease, box-shadow .2s ease;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 25px rgba(255,255,255,0.05);
+    .card img {
+      width: 60px;
+      margin-bottom: 10px;
     }
 
     .card h3 {
@@ -55,9 +54,19 @@
       font-size: 1.3rem;
     }
 
-    .card ul {
-      padding-left: 18px;
-      color: #bbb;
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .price {
+      margin-top: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
     }
 
     .btn {
@@ -70,21 +79,11 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 0.9rem;
+      text-align: center;
     }
 
     .btn:hover {
       background: #e6e6e6;
-    }
-
-    .info-box {
-      margin-top: 60px;
-      background: #121212;
-      border-radius: 14px;
-      padding: 25px;
-    }
-
-    .info-box h3 {
-      margin-top: 0;
     }
 
     footer {
@@ -98,73 +97,54 @@
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <h1>United Glory Shop</h1>
-    <p>
-      Servicios digitales dentro del entorno gaming.  
-      Todas las solicitudes se gestionan de forma manual para asegurar calidad y soporte.
-    </p>
+  <h1>United Glory Shop</h1>
+  <p>Servicios digitales dentro del entorno gaming. Entrega manual y soporte personalizado.</p>
 
-    <div class="shop-grid">
+  <div class="shop-grid">
 
-      <!-- FREE FIRE -->
-      <div class="card">
-        <h3>🔥 Free Fire</h3>
-        <p>Recargas de diamantes gestionadas manualmente.</p>
-        <ul>
-          <li>Entrega rápida</li>
-          <li>Soporte por Discord</li>
-          <li>Proceso seguro</li>
-        </ul>
-        <a href="#" class="btn">Solicitar recarga</a>
-      </div>
+    <!-- FREE FIRE -->
+    <div class="card">
+      <img src="images/diamonds.png" alt="Diamantes Free Fire">
+      <h3>🔥 Free Fire</h3>
 
-      <!-- MINECRAFT -->
-      <div class="card">
-        <h3>⛏️ Minecraft</h3>
-        <p>Servicios para servidores Java & Bedrock.</p>
-        <ul>
-          <li>Construcciones</li>
-          <li>Configuración de plugins</li>
-          <li>Optimización</li>
-        </ul>
-        <a href="#" class="btn">Solicitar servicio</a>
-      </div>
+      <label>Selecciona el paquete:</label>
+      <select>
+        <option>520 + 52 Bonus — $95 MXN</option>
+        <option>💎 Paquete 2 — (edítalo luego)</option>
+        <option>💎 Paquete 3 — (edítalo luego)</option>
+      </select>
 
-      <!-- SERVICIOS GAMING -->
-      <div class="card">
-        <h3>⚙️ Servicios Gaming</h3>
-        <p>Soporte y soluciones personalizadas.</p>
-        <ul>
-          <li>Asesoría técnica</li>
-          <li>Configuraciones</li>
-          <li>Soporte general</li>
-        </ul>
-        <a href="#" class="btn">Contactar</a>
-      </div>
+      <div class="price">$95 MXN</div>
 
+      <a href="#" class="btn">Solicitar recarga</a>
     </div>
 
-    <div class="info-box">
-      <h3>¿Cómo funciona?</h3>
-      <p>
-        1. Selecciona el servicio<br>
-        2. Contáctanos por Discord<br>
-        3. Te indicamos el precio<br>
-        4. Realizas el pago<br>
-        5. Entrega del servicio
-      </p>
-
-      <p><strong>Métodos de pago:</strong> PayPal</p>
+    <!-- MINECRAFT -->
+    <div class="card">
+      <img src="images/minecraft.png" alt="Minecraft">
+      <h3>⛏️ Minecraft</h3>
+      <p>Construcciones y configuración de servidores.</p>
+      <a href="#" class="btn">Solicitar servicio</a>
     </div>
 
-    <footer>
-      United Glory es un proyecto gaming independiente.  
-      No somos afiliados oficiales de Garena, Mojang ni terceros.
-    </footer>
+    <!-- SERVICIOS -->
+    <div class="card">
+      <img src="images/services.png" alt="Servicios">
+      <h3>⚙️ Servicios Gaming</h3>
+      <p>Soporte técnico y soluciones personalizadas.</p>
+      <a href="#" class="btn">Contactar</a>
+    </div>
 
   </div>
+
+  <footer>
+    United Glory es un proyecto gaming independiente.  
+    No somos afiliados oficiales de Garena ni Mojang.
+  </footer>
+
+</div>
 
 </body>
 </html>

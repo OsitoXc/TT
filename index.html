@@ -2,154 +2,79 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>United Glory | Shop</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | United Glory</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="GLORY - B.png">
+  <meta name="theme-color" content="#0c0d11">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0e0e0e;
-      color: #fff;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #ccc;
-      line-height: 1.6;
-    }
-
-    .shop-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #151515;
-      border-radius: 14px;
-      padding: 25px;
-    }
-
-    .card img {
-      width: 60px;
-      margin-bottom: 10px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 1.3rem;
-    }
-
-    select {
-      width: 100%;
-      padding: 10px;
-      border-radius: 8px;
-      border: none;
-      margin-top: 10px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .price {
-      margin-top: 12px;
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      border-radius: 8px;
-      background: #ffffff;
-      color: #000;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    .btn:hover {
-      background: #e6e6e6;
-    }
-
-    footer {
-      margin-top: 60px;
-      text-align: center;
-      font-size: 0.85rem;
-      color: #777;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css">
 </head>
 
 <body>
 
-<div class="container">
-
-  <h1>United Glory Shop</h1>
-  <p>Servicios digitales dentro del entorno gaming. Entrega manual y soporte personalizado.</p>
-
-  <div class="shop-grid">
-
-    <!-- FREE FIRE -->
-    <div class="card">
-      <img src="images/diamonds.png" alt="Diamantes Free Fire">
-     <h2>Recarga de Diamantes Free Fire</h2>
-<p>Selecciona la cantidad de diamantes que deseas recargar.</p>
-
-<div class="ff-shop">
-
-  <div class="ff-card">
-    <img src="images/diamond.png">
-    <h3>100 Diamantes</h3>
-    <p>$19 MXN</p>
-    <a href="TU_LINK_PAYPAL_100" class="btn">Pagar con PayPal</a>
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <div class="site-name">UNITED GLORY</div>
   </div>
 
-  <div class="ff-card">
-    <img src="images/diamond.png">
-    <h3>520 Diamantes</h3>
-    <p>$99 MXN</p>
-    <a href="TU_LINK_PAYPAL_520" class="btn">Pagar con PayPal</a>
+  <div id="menu" class="dropdown-menu">
+    <a href="/">HOME</a>
+    <a href="/news">NEWS</a>
+    <a href="/services">SERVICES</a>
   </div>
-
-  <div class="ff-card">
-    <img src="images/diamond.png">
-    <h3>1060 Diamantes</h3>
-    <p>$199 MXN</p>
-    <a href="TU_LINK_PAYPAL_1060" class="btn">Pagar con PayPal</a>
-  </div>
-
 </div>
-    <!-- SERVICIOS -->
-    <div class="card">
-      <img src="images/services.png" alt="Servicios">
-      <h3>⚙️ Servicios Gaming</h3>
-      <p>Soporte técnico y soluciones personalizadas.</p>
-      <a href="#" class="btn">Contactar</a>
+
+<!-- MAIN -->
+<main class="container">
+
+  <section class="hero-card">
+    <h2 class="section-title">OUR SERVICES</h2>
+    <p class="text-muted">
+      Servicios enfocados en gaming, desarrollo y soporte para comunidades.
+    </p>
+  </section>
+
+  <section class="services-grid">
+
+    <div class="service-card">
+      <h3>Free Fire Diamonds</h3>
+      <p>
+        Venta segura de diamantes para Free Fire,
+        con entrega rápida y métodos confiables.
+      </p>
+      <span class="service-tag">GAME CURRENCY</span>
     </div>
 
-  </div>
+    <div class="service-card">
+      <h3>Minecraft Builds</h3>
+      <p>
+        Construcciones personalizadas para servidores:
+        spawns, lobbys, arenas y mapas únicos.
+      </p>
+      <span class="service-tag">BUILDS</span>
+    </div>
 
-  <footer>
-    United Glory es un proyecto gaming independiente.  
-    No somos afiliados oficiales de Garena ni Mojang.
-  </footer>
+    <div class="service-card">
+      <h3>Plugin Configuration</h3>
+      <p>
+        Configuración y optimización de plugins
+        para servidores Minecraft Java & Bedrock.
+      </p>
+      <span class="service-tag">DEVELOPMENT</span>
+    </div>
 
-</div>
+  </section>
 
+</main>
+
+<footer class="footer-card">
+  ©2025 United Glory | All rights reserved.
+</footer>
+
+<script src="assets/js/navbar.js"></script>
 </body>
 </html>

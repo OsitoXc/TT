@@ -3,100 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | United Glory</title>
+  <title>Portfolio | Abi - Developer</title>
 
   <link rel="icon" type="image/png" href="GLORY - B.png">
   <meta name="theme-color" content="#0c0d11">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/global.css">
+
+  <style>
+    body {
+      background: linear-gradient(180deg, #0c0d11 0%, #0f1b24 100%);
+    }
+
+    .aqua-title {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card {
+      background: rgba(18, 25, 35, 0.9);
+      border: 1px solid rgba(0, 200, 255, 0.2);
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 25px rgba(0, 200, 255, 0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 1rem;
+      color: #00c6ff;
+    }
+
+    .card p {
+      color: #cfd8dc;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #00eaff;
+      font-weight: 600;
+    }
+  </style>
 </head>
-
-<script>
-const input = document.getElementById('buyerContact');
-const paypalBox = document.getElementById('paypalBox');
-
-input.addEventListener('input', () => {
-  if (input.value.trim().length >= 5) {
-    paypalBox.style.opacity = '1';
-    paypalBox.style.pointerEvents = 'auto';
-  } else {
-    paypalBox.style.opacity = '.4';
-    paypalBox.style.pointerEvents = 'none';
-  }
-});
-</script>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
   <div class="navbar-inner">
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    <div class="site-name">UNITED GLORY</div>
-  </div>
-
-  <div id="menu" class="dropdown-menu">
-    <a href="/">HOME</a>
-    <a href="/news">NEWS</a>
-    <a href="/services">SERVICES</a>
+    <div class="site-name">ABI | DEVELOPER</div>
   </div>
 </div>
 
-<!-- MAIN -->
 <main class="container">
 
   <section class="hero-card">
-    <h2 class="section-title">OUR SERVICES</h2>
+    <h2 class="section-title aqua-title">Developer Portfolio</h2>
     <p class="text-muted">
-      Servicios enfocados en gaming, desarrollo y soporte para comunidades.
+      Desarrollo técnico para comunidades gaming, servidores y entornos digitales.
     </p>
+  </section>
 
-<!-- DEVELOPER PROFILE -->
-<section class="product-card">
-
-  <div class="product-header">
-    <div>
-      <h2 class="section-title">Developer Profile</h2>
-      <p class="product-desc">
-        Perfil profesional enfocado en desarrollo y configuración de servidores Minecraft.
-      </p>
-    </div>
-  </div>
-
-  <!-- INFO PERSONAL -->
-  <div class="product-note">
-    <strong>Información General</strong><br>
-    • Apodo: Abi<br>
-    • Edad: 18 años<br>
-    • País: México<br>
-    • Experiencia: 3 años y medio en desarrollo
-  </div>
-
-  <!-- ESPECIALIZACIÓN -->
-  <div class="legal-box">
+  <!-- PERFIL -->
+  <section class="card">
+    <h3>Perfil Profesional</h3>
     <p>
-      <strong>Especialización en Minecraft</strong><br><br>
-
-      • Desarrollo y estructuración de networks.<br>
-      • Configuración avanzada de cualquier tipo de plugin.<br>
-      • Implementación completa de servidores desde cero.<br>
-      • Optimización de rendimiento y estabilidad.<br>
-      • Integración de sistemas personalizados.<br><br>
-
-      Experiencia trabajando en servidores de tamaño medio, 
-      aportando estructura técnica y estabilidad operativa.
+      Apodo: <span class="highlight">Abi</span><br>
+      Edad: 18 años<br>
+      País: México<br>
+      Experiencia: 3 años y medio como Developer.
     </p>
-  </div>
+    <p>
+      Especializado en desarrollo técnico dentro del ecosistema Minecraft,
+      automatización en Discord y creación de soluciones web.
+    </p>
+  </section>
 
-</section>
+  <!-- MINECRAFT -->
+  <section class="card">
+    <h3>Minecraft Development (Java & Bedrock)</h3>
+    <p>
+      • Desarrollo y estructuración completa de networks.<br>
+      • Implementación integral de servidores desde cero.<br>
+      • Configuración avanzada y optimización de plugins.<br>
+      • Integración Java ↔ Bedrock (Geyser).<br>
+      • Optimización de rendimiento y estabilidad operativa.<br>
+    </p>
+    <p>
+      Experiencia trabajando en servidores de tamaño medio,
+      garantizando estructura técnica sólida y funcionamiento estable.
+    </p>
+  </section>
+
+  <!-- DISCORD -->
+  <section class="card">
+    <h3>Discord Development</h3>
+    <p>
+      • Desarrollo de bots personalizados.<br>
+      • Sistemas de tickets y soporte automatizado.<br>
+      • Moderación automática y control estructurado.<br>
+      • Automatización de roles y procesos internos.<br>
+      • Configuración profesional de servidores competitivos.
+    </p>
+  </section>
+
+  <!-- WEB & APPS -->
+  <section class="card">
+    <h3>Web & App Development</h3>
+    <p>
+      • Creación de páginas web informativas y landing pages.<br>
+      • Sistemas básicos de tiendas digitales.<br>
+      • Gestión de pedidos y estructuras administrativas online.<br>
+      • Desarrollo de aplicaciones simples orientadas a comunidades.
+    </p>
+  </section>
 
 </main>
 
 <footer class="footer-card">
-  ©2025 United Glory | All rights reserved.
+  ©2025 Abi Developer | All rights reserved.
 </footer>
 
-<script src="assets/js/navbar.js"></script>
 </body>
 </html>

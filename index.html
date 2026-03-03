@@ -33,6 +33,27 @@
       z-index: -1;
     }
 
+    /* ===== LOADER ===== */
+    #loader{
+      position: fixed;
+      inset: 0;
+      background: #0c0d11;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 99999;
+      transition: opacity .5s ease, visibility .5s ease;
+    }
+
+    #loader img{
+      width: 140px; /* ajusta si tu gif es más grande */
+    }
+
+    #loader.hidden{
+      opacity: 0;
+      visibility: hidden;
+    }
+
     .navbar {
       padding: 1.5rem 3rem;
       display: flex;
@@ -140,6 +161,11 @@
 
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+  <img src="img/tu-gif.gif" alt="Loading animation">
+</div>
+
 <div class="navbar">
   <div class="site-name">ABI</div>
 </div>
@@ -203,6 +229,18 @@
 <footer>
   ©2025 Abi Developer | All rights reserved.
 </footer>
+
+<!-- SCRIPT LOADER -->
+<script>
+  window.addEventListener("load", function(){
+    const loader = document.getElementById("loader");
+
+    // mínimo 1 segundo para que no parpadee
+    setTimeout(() => {
+      loader.classList.add("hidden");
+    }, 800);
+  });
+</script>
 
 </body>
 </html>
